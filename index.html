@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Predictor</title>    
+</head>
+
+<link rel="stylesheet" href="./style.css">
+
+<body>
+    <div class="tab">
+        <h1 style="padding: 0px 30px; color: rgb(220, 212, 212); text-align: left;">Rashmi</h1>
+    </div>
+
+    <div class="data">
+        <h1 id="H1" style="color: #395B64;">Enter Patient info here:</h1>
+        <form onsubmit="handleSubmit(event)" id="form">
+
+            <label for="item1">Pregnancies: </label>
+            <input type="text" id="item1" name="preg" placeholder="No. of Pregnancies"><br><br>
+
+            <label for="item2">Glucose: </label>
+            <input type="text" id="item2" name="glucose" placeholder="Plasma glucose concentration"><br><br>
+
+            <label for="item3">Diastolic BP: </label>
+            <input type="text" id="item3" name="bp" placeholder="Diastolic blood pressure"><br><br>
+
+            <label for="item4">Skin thickness: </label>
+            <input type="text" id="item4" name="skinthick" placeholder="Triceps skin fold thickness"><br><br>
+
+            <label for="item5">Insulin: </label>
+            <input type="text" id="item5" name="insulin" placeholder="2-Hour serum insulin"><br><br>
+
+            <label for="item6">BMI: </label>
+            <input type="text" id="item6" name="bmi" placeholder="BMI"><br><br>
+
+            <label for="item7">Pedigree func: </label>
+            <input type="text" id="item7" name="pedifunc" placeholder="Diabetes pedigree function"><br><br>
+
+            <label for="item8">Age: </label>
+            <input type="text" id="item8" name="age" placeholder="Age"><br><br>
+
+            <button type="submit" style="font-size: 100%;">Submit</button>
+        </form>
+    </div>
+
+    <h1 id="print"></h1>
+
+</body>
+
+<script src="./script.js"></script>
+
+</html>

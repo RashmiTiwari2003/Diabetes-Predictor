@@ -1,0 +1,85 @@
+body
+{
+    display: flex;
+    flex-direction: column;
+    background:#EEEEEE;
+    margin: 0px;
+}
+
+.tab
+{
+    width: 100%;
+    background-color: #395B64;
+}
+.data
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+label
+{
+    padding-right: 10px;
+    font-size: larger;
+    color: #395B64;
+    font-weight: 700;
+}
+input[type=text]
+{
+    width: 400px;
+    height: 30px;
+    border-color: white;
+    border-radius: 8px;
+    outline: none;
+}
+input[type=text]:focus
+{
+    border-color:black;
+}
+button
+{
+    width: 90px;
+    height: 30px;
+    border-radius: 5px;
+    color: white;
+    border-color: #395B64;
+    background-color: #395B64;
+    outline: none;
+}
+button:hover
+{
+    border-color: #2C3333;
+    background-color: #2C3333;
+    color: white;
+    transition: 0.5s ease-in-out;
+}
+
+#print
+{
+    color: #395B64;
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) 
+{
+    .tab
+    {
+        width: 100%;
+    }
+
+    input[type=text]
+    {
+        width: 55%;
+        height: 70%;
+    }
+
+    .data
+    {
+        padding: 10px;
+    }
+
+    label
+    {
+        font-size: medium;
+    }
+}
