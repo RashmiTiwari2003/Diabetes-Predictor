@@ -8,6 +8,10 @@ with open('model.pkl','rb') as file:
 app = Flask(__name__)
 CORS(app) 
 
+@app.route('/',methods=['GET'])
+def route():
+    return "Hello"
+
 @app.route('/back', methods=['POST'])
 def example_route():
     X=[]
