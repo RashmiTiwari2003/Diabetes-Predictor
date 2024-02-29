@@ -20,7 +20,7 @@ async function handleSubmit(e)
         Age: e.target.age.value
     }
 
-    const resp = await fetch('http://127.0.0.1:5000/back', {
+    const resp = await fetch('https://diabetes-predictor-ecru.vercel.app/back', {
         method: 'POST',
         headers: {
             'content-type': 'application/json'
@@ -31,7 +31,7 @@ async function handleSubmit(e)
     console.log(res.message)
 
     const head = document.querySelector('#print')
-    head.innerText ="Patient is: " + res.message
+    head.innerText ="Patient maybe: " + res.message
 
     document.querySelector('#form').reset();
 }
