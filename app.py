@@ -25,7 +25,6 @@ def example_route():
         data=float(request_data[x])
         X.append(data)
 
-    # 1,155,78,31,0,25.3,0.6777,39
     prediction = clf.predict([X])
     print(prediction)
 
