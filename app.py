@@ -2,8 +2,8 @@ import pickle
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 
-with open('model.pkl','rb') as db:
-    clf = pickle.load(db)
+with open('model.pkl','rb') as file:
+    clf = pickle.load(file)
 
 app = Flask(__name__)
 CORS(app) 
