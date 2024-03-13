@@ -5,9 +5,6 @@ from flask_cors import CORS
 with open('model.pkl','rb') as db:
     clf = pickle.load(db)
 
-with open('mood_pred.pkl','rb') as emotions:
-    vectorizer, model=pickle.load(emotions)
-
 app = Flask(__name__)
 CORS(app) 
 
@@ -32,31 +29,6 @@ def example_route():
     message="Diabetic" if prediction else "Non-Diabetic"
 
     return jsonify({"message": message}), 200
-
-@app.route('/emotions',methods =['POST'])
-def emotions():
-    request_text = request.get_json()
-    # print("Text recieved: ", request_text)
-
-    text=vectorizer.transform([request_text])
-    prediction=model.predict(text)
-
-    # print(prediction[0])
-
-    if (prediction[0]==0):
-        message='Are you experiencing Sadness..?'
-    elif (prediction[0]==1):
-        message='Seems joyous and happy'
-    elif (prediction[0]==2):
-        message='It feels like Love'
-    elif (prediction[0]==3):
-        message='Are you experiencing Anger?'
-    elif (prediction[0]==4):
-        message='Comes across as fearful'
-    elif (prediction[0]==5):
-        message='Surprise'
-
-    return jsonify({"emotion": message}), 200
 
 if __name__ == '__main__':
     app.run(debug=True)
