@@ -6,7 +6,8 @@ from flask_cors import CORS
 with open('model.pkl','rb') as file:
     clf = pickle.load(file)
 
-vectorizer,model=load('mood_predictor.joblib')
+vectorizer=load('vectorizer.joblib')
+model=load('model.joblib')
 
 app = Flask(__name__)
 CORS(app) 
